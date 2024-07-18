@@ -1,0 +1,14 @@
+/**
+ * @param {string} s
+ * @param {number} k
+ * @return {string}
+ */
+var getEncryptedString = function(s, k) {
+    const n = s.length;
+    let encrypted_string = "";
+
+    for (let i = 0; i< n; i++) 
+        encrypted_string += s[(i + k) % n];
+
+    return encrypted_string;
+};
